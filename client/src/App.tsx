@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import WorldCupTable from "./components/WorldCupTable";
 import type { WorldCup } from "./types/worldCup";
 
-const API_URL = "http://localhost:3000";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function App() {
   const [worldCups, setWorldCups] = useState<WorldCup[]>([]);
